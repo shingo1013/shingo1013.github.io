@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  padding: 10px;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+/* -------------------------------- */
+#works .flex-item {
+  display: flex;
+}
+#works .nordic-trip {
+  width: 30%;
+}
+#works .nordic-trip a:hover {
+  opacity: 0.5;
+}
