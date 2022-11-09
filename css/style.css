@@ -10,6 +10,9 @@ a {
   color: #000;
   text-decoration: none;
 }
+a:hover {
+  opacity: 0.5;
+}
 img {
   max-width: 100%;
   vertical-align: bottom;
@@ -17,10 +20,15 @@ img {
 /* -------------------------------- */
 #works .flex-item {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 #works .nordic-trip {
-  width: 30%;
+  width: 48%;
 }
-#works .nordic-trip a:hover {
-  opacity: 0.5;
+#works .media {
+  width: 48%;
+}
+#works .gallery {
+  width: 48%;
 }
