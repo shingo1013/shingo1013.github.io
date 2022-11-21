@@ -4,20 +4,131 @@ html {
   font-size: 100%;
 }
 body {
-  padding: 10px;
+  padding: 0 10px;
 }
 a {
-  color: #000;
   text-decoration: none;
 }
 a:hover {
   opacity: 0.5;
 }
+li {
+  list-style: none;
+}
 img {
   max-width: 100%;
   vertical-align: bottom;
 }
-/* -------------------------------- */
+/* --------------------------------
+header
+-----------------------------------*/
+#header {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+/* ---------------------------------
+hamburger
+----------------------------------*/
+.hamburger {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 20;
+  transition: 0.5s;
+}
+.hamburger.open {
+  background-color: rgba(0, 0, 0, 0);
+}
+.hamburger span {
+  width: 20px;
+  height: 4px;
+  background-color: #000;
+  display: block;
+  position: absolute;
+  left: 5px;
+  transition: 0.5s;
+}
+.hamburger.open span {
+  background-color: #fff;
+}
+.hamburger span:nth-child(1) {
+  top: 5px;
+}
+.hamburger span:nth-child(2) {
+  top: 13px;
+}
+.hamburger span:nth-child(3) {
+  bottom: 5px;
+}
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 13px;
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 13px;
+}
+/* ---------------------------------
+navi
+-------------------------------------*/
+#navi {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  padding: 10px;
+}
+#navi.open {
+  opacity: 0.9;
+  z-index: 10;
+}
+#navi ul {
+  margin: 60px auto;
+  max-width: 800px;
+}
+#navi ul li {
+  margin-bottom: 30px;
+}
+#navi ul li a {
+  color: #fff;
+}
+/* --------------------------------
+main
+----------------------------------- */
+#main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* --------------------------------
+profile
+------------------------------------*/
+dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+dt {
+  width: 20%;
+}
+dd {
+  width: 80%;
+}
+/* ----------------------------------
+works
+------------------------------------*/
 #works .flex-item {
   display: flex;
   justify-content: space-between;
@@ -31,4 +142,12 @@ img {
 }
 #works .gallery {
   width: 48%;
+}
+/* ---------------------------------
+sp
+------------------------------------*/
+@media screen and (max-width: 700px) {
+  h1 span {
+    display: block;
+  }
 }
