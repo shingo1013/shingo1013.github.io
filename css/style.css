@@ -7,6 +7,7 @@ body {
   padding: 0 10px;
 }
 a {
+  color: #000;
   text-decoration: none;
 }
 a:hover {
@@ -19,25 +20,36 @@ img {
   max-width: 100%;
   vertical-align: bottom;
 }
+/* -------------------------------
+全体
+-------------------------------------*/
+section {
+  margin-bottom: 50px;
+}
 /* --------------------------------
 header
 -----------------------------------*/
 #header {
   max-width: 1080px;
   margin: 0 auto;
+  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 /* ---------------------------------
 hamburger
 ----------------------------------*/
+.hamburger-area {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
 .hamburger {
   width: 30px;
   height: 30px;
   background-color: #fff;
   position: fixed;
-  top: 10px;
-  right: 10px;
   cursor: pointer;
   z-index: 20;
   transition: 0.5s;
@@ -90,18 +102,18 @@ navi
   width: 100%;
   height: 100%;
   z-index: -10;
-  padding: 10px;
+  padding: 0 50px;
 }
 #navi.open {
   opacity: 0.9;
   z-index: 10;
 }
 #navi ul {
-  margin: 60px auto;
+  margin: 50px auto;
   max-width: 800px;
 }
 #navi ul li {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 #navi ul li a {
   color: #fff;
@@ -116,38 +128,90 @@ main
 /* --------------------------------
 profile
 ------------------------------------*/
-dl {
+#profile dl {
   display: flex;
   flex-wrap: wrap;
 }
-dt {
+#profile dt {
   width: 20%;
 }
-dd {
+#profile dd {
   width: 80%;
+}
+/* ---------------------------------
+skill
+-----------------------------------*/
+#skill dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+#skill dt {
+  width: 20%;
+}
+#skill dd {
+  width: 80%;
+}
+#skill .codestep, #skill .book {
+  color: #888;
+  text-decoration: underline;
 }
 /* ----------------------------------
 works
 ------------------------------------*/
-#works .flex-item {
+#works .work-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-#works .nordic-trip {
-  width: 48%;
+#works > ul > li {
+  width: 49%;
+  margin-bottom: 20px;
 }
-#works .media {
-  width: 48%;
+/* ----------------------------------
+contact
+-------------------------------------*/
+#contact p {
+  display: inline;
 }
-#works .gallery {
-  width: 48%;
+.fa-twitter {
+  font-size: 50px;
+  color: #00acee;
+}
+/* -----------------------------------
+footer
+-------------------------------------*/
+#footer {
+  text-align: center;
 }
 /* ---------------------------------
 sp
 ------------------------------------*/
 @media screen and (max-width: 700px) {
+  /* --------------------------
+  header
+  -----------------------------*/
   h1 span {
     display: block;
+  }
+  /* -------------------------------
+  skill
+  ---------------------------------*/
+  #skill dl {
+    flex-direction: column;
+  }
+  #skill dt {
+    width: 100%;
+  }
+  #skill dd {
+    width: 100%;
+  }
+  /* ------------------------------
+  works
+  --------------------------------*/
+  #works .work-list {
+    flex-direction: column;
+  }
+  #works > ul > li {
+    width: 100%;
   }
 }
