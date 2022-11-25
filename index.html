@@ -7,6 +7,7 @@
   <meta name="description" content="しんごのポートフォリオです">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link href="https://use.fontawesome.com/releases/v6.2.1/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <script src="js/main.js"></script>
@@ -19,17 +20,19 @@
       <span>Portfolio </span>
       <span>Site</span>
     </h1>
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="hamburger-area">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
     <nav id="navi">
       <ul>
         <li><a href="#profile">Profile</a></li>
         <li><a href="#career">Career</a></li>
         <li><a href="#skill">Skill</a></li>
-        <li><a href="#work">Work</a></li>
+        <li><a href="#works">Work</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -52,55 +55,137 @@
 
     <section id="career">
       <h2>Career</h2>
-      <p class="year">2008年3月</p>
-      <p class="content">兵庫県北部の公立高校を卒業</p>
-      <p class="year">2010年4月</p>
-      <p class="content">大阪市立大学 工学部 電子物理工学科 入学</p>
-      <p class="year">2016年3月</p>
-      <p class="content">大阪市立大学 工学部 電子物理工学科 卒業</p>
-      <p class="year">2016年4月</p>
-      <p class="content">大阪市立大学 大学院 工学研究科 電子情報系専攻 入学</p>
-      <p class="year">2018年3月</p>
-      <p class="content">大阪市立大学 大学院 工学研究科 電子情報系専攻 修了</p>
-      <p class="year"></p>
-      <p class="content"></p>
-      <p class="year"></p>
-      <p class="content"></p>
+      <ul>
+        <li>
+          <p class="year">2008年3月</p>
+          <p class="content">兵庫県北部の公立高校を卒業</p>
+        </li>
+        <li>
+          <p class="year">2010年4月</p>
+          <p class="content">大阪市立大学 工学部 電子物理工学科 入学</p>
+        </li>
+        <li>
+          <p class="year">2016年3月</p>
+          <p class="content">大阪市立大学 工学部 電子物理工学科 卒業</p>
+        </li>
+        <li>
+          <p class="year">2016年4月</p>
+          <p class="content">大阪市立大学 大学院 工学研究科 電子情報系専攻 入学</p>
+        </li>
+        <li>
+          <p class="year">2018年3月</p>
+          <p class="content">大阪市立大学 大学院 工学研究科 電子情報系専攻 修了</p>
+        </li>
+        <li>
+          <p class="year"></p>
+          <p class="content"></p>
+        </li>
+        <li>
+          <p class="year"></p>
+          <p class="content"></p>
+        </li>
+      </ul>
     </section>
 
     <section id="skill">
       <h2>Skill</h2>
+      <dl>
+        <dt>使用できる言語：</dt>
+        <dd>HTML, CSS, JavaScript(jQuery)</dd>
+        <dt>学習サイト　　：</dt>
+        <dd><a class="codestep" href="https://code-step.com/">Codestep</a> など</dd>
+        <dt>使用した参考書：</dt>
+        <dd>
+          <ul>
+            <li>
+              <a class="book" href="https://gihyo.jp/book/2022/978-4-297-12510-3">HTML＆CSSとWebデザインが1冊できちんと身につく本</a>
+            </li>
+            <li>
+              <a class="book" href="https://www.sbcr.jp/product/4815601577/">確かな力が身につくJavaScript「超」入門 第2版</a> など
+            </li>
+          </ul>
+        </dd>
+        <p>現在、ReactなどのJavaScriptライブラリを学習中。</p>
     </section>
 
     <section id="works">
       <h2>Works</h2>
-      <div class="flex-item">
-        <div class="nordic-trip">
+      <ul class="work-list">
+        <li class="nordic-trip">
           <a href="https://shingo1013.github.io/nordic-trip" target="_blank">
+            <h3>北欧旅の記録</h3>
             <img src="img/nordic-trip.png" alt="北欧旅">
-            <p>知人がデザインした北欧旅の記録をコーディングさせていただきました。</p>
           </a>
-        </div>
-        <div class="media">
+          <p>知人がデザインした北欧旅の記録をコーディングさせていただきました。</p>
+          <dl>
+            <dt>使用言語：</dt>
+            <dd>HTML, CSS, JavaScript(jQuery)</dd>
+            <dt>ポイント：</dt>
+            <dd>
+              <ul class="point">
+                <li>・サイトタイトル画像を透過にしバックにslickでスライドショーをつけました</li>
+                <li>・スクロールイベントで線と点の位置関係とフェード表示のタイミングを工夫しました</li>
+                <li>・サイト後半はinviewを使いフェード表示させました</li>
+              </ul>
+            </dd>
+            <dt>作成期間：約20日間</dt>
+          </dl>
+        </li>
+        <li class="media">
           <a href="https://shingo1013.github.io/media" target="_blank">
+            <h3>スニーカーのニュースメディアサイト</h3>
             <img src="img/media.png" alt="メディア">
-            <p>Codestepの模写サイトの一つです。</p>
           </a>
-        </div>
-        <div class="gallery">
+          <p>Codestepの模写サイトの一つです。</p>
+          <dl>
+            <dt>使用言語：</dt>
+            <dd>HTML, CSS, JavaScript(jQuery)</dd>
+            <dt>ポイント：</dt>
+            <dd>
+              <ul class="point">
+                <li>・「PICK UP」にslickでカルーセルスライダーをつけました</li>
+                <li>・「FEAURE」では画像をグリッドレイアウトでタイル状に配置しスクロールイベントでフェード表示させました</li>
+              </ul>
+            </dd>
+            <dt>作成期間：約1週間</dt>
+          </dl>
+        </li>
+        <li class="gallery">
           <a href="https://shingo1013.github.io/gallery" target="_blank">
+            <h3>フラワーアレンジメント<br>ギャラリーサイト</h3>
             <img src="img/gallery.png" alt="ギャラリー">
-            <p>Codestepの模写サイトの一つです。</p>
           </a>
-        </div>
-      </div>
+          <p>Codestepの模写サイトの一つです。</p>
+          <dl>
+            <dt>使用言語：</dt>
+            <dd>HTML, CSS, JavaScript(jQuery)</dd>
+            <dt>ポイント：</dt>
+            <dd>
+              <ul class="point">
+                <li>・メインヴィジュアルはスクロールイベントを使いスクロール量によって画像が拡大縮小するようにしました</li>
+                <li>・サイトタイトルや「GALLERY」の画像はinviewを使いフェード表示させました</li>
+              </ul>
+            </dd>
+            <dt>作成期間：約1週間</dt>
+          </dl>
+        </li>
+      </ul>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
+      <a href="https://twitter.com/shingo1013eng" target="_blank">
+        <p>Twitterのダイレクトメールまで</p>
+        <i class="fa-brands fa-twitter"></i>
+      </a>
     </section>
 
   </main>
+
+  <footer id="footer">
+    <p>&copy; Shingo</p>
+  </footer>
+
 </body>
 
 </html>
