@@ -151,7 +151,7 @@ skill
 #skill dd {
   width: 80%;
 }
-#skill .codestep, #skill .book {
+#skill .learning-site, #skill .book {
   color: #888;
   text-decoration: underline;
 }
