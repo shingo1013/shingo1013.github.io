@@ -167,6 +167,16 @@ works
   width: 49%;
   margin-bottom: 20px;
 }
+#works .memo {
+  display: flex;
+  flex-wrap: wrap;
+}
+#works dt, #works dd {
+  width: 100%;
+}
+#works .period {
+  width: 80px;
+}
 /* ----------------------------------
 contact
 -------------------------------------*/
