@@ -182,6 +182,8 @@ contact
 -------------------------------------*/
 #contact p {
   display: inline;
+  color: #888;
+  text-decoration: underline;
 }
 .fa-twitter {
   font-size: 50px;
