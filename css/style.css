@@ -147,7 +147,34 @@ profile
 /* ---------------------------------
 career
 -------------------------------------*/
-
+#career strong {
+  display: block;
+}
+#career .timeline {
+  margin-left: 20px;
+}
+#career .timeline li {
+  margin: 20px;
+  position: relative;
+}
+#career .timeline li::before {
+  content:'';
+	position: absolute;
+	top: 6px;
+	left: -20px;
+	width: 10px;
+	height: 10px;
+	background: #888;
+	border-radius: 50%;
+}
+#career .border-line {
+  position: absolute;
+  top: 16px;
+  left: -16px;
+  width: 2px;
+  height: 0;
+  background-color: #000;
+}
 /* ---------------------------------
 skill
 -----------------------------------*/
@@ -199,7 +226,8 @@ contact
 #contact {
   text-align: center;
 }
-#contact p {
+#contact a {
+  display: inline-block;
   color: #888;
   text-decoration: underline;
 }
