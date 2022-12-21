@@ -23,6 +23,7 @@ $(function () {
 
   $(window).on('scroll', function () {
     header_sync();
+    timelineAnime();
   });
 
 });
@@ -39,13 +40,17 @@ function header_sync() {
   let career_pos = $('#career').offset().top - 90;
   let skill_pos = $('#skill').offset().top - 90;
   let works_pos = $('#works').offset().top - 90;
-  let contact_pos = $('#contact').offset().top - 90;
-  if (scroll == 0) {
-    $('a[href="#profile"]').removeClass('active');
-    $('a[href="#"]').addClass('active');
+  let contact_pos = $('#contact').offset().top - $(window).height();
+  let footer_pos = $('#footer').offset().top - $(window).height();
+  let pageBottom = $(document).height() - $(window).height();
+  if (scroll >= 0) {
+    if (scroll < profile_pos) {
+      $('a[href="#profile"]').removeClass('active');
+      $('a[href="#"]').addClass('active');
+    }
   }
   if (scroll >= profile_pos) {
-    if (scroll <= career_pos) {
+    if (scroll < career_pos) {
       $('a[href="#"]').removeClass('active');
       $('a[href="#career"]').removeClass('active');
       $('a[href="#profile"]').addClass('active');
@@ -66,17 +71,32 @@ function header_sync() {
     }
   }
   if (scroll >= works_pos) {
-    if (scroll < contact_pos) {
+    if (scroll < footer_pos) {
       $('a[href="#skill"]').removeClass('active');
       $('a[href="#contact"]').removeClass('active');
       $('a[href="#works"]').addClass('active');
     }
   }
-  let docHeight = $(document).innerHeight();
-  let windowHeight = $(window).innerHeight();
-  let pageBottom = docHeight - windowHeight;
-  if (pageBottom <= $(window).scrollTop()) {
+  if (scroll >= footer_pos) {
     $('a[href="#works"]').removeClass('active');
     $('a[href="#contact"]').addClass('active');
   }
+}
+
+function timelineAnime() {
+  $('.timeline li').each(function () {
+    let scroll = $(window).scrollTop();
+    let elemPos = $(this).offset().top;
+    let startPoint = 300;
+    if (scroll >= elemPos - 1 / 2 * $(window).height()) {
+      let H = $(this).height();
+      let percent = (scroll + startPoint - elemPos) / (H) * 100;
+      if (percent > 100) {
+        percent = 100;
+      }
+      $(this).children('.border-line').css({
+        height: percent + 30 + "%",
+      });
+    }
+  });
 }
