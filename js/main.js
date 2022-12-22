@@ -95,7 +95,7 @@ function timelineAnime() {
         percent = 100;
       }
       $(this).children('.border-line').css({
-        height: percent + 30 + "%",
+        height: percent + 20 + "%",
       });
     }
   });
