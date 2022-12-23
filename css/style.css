@@ -201,7 +201,7 @@ works
   flex-wrap: wrap;
 }
 #works > ul > li {
-  width: 49%;
+  width: 48%;
   margin-bottom: 30px;
 }
 #works .memo {
@@ -253,7 +253,7 @@ sp
   .hamburger-area {
     position: absolute;
     top: 10px;
-    right: 30px;
+    right: 40px;
   }
   .hamburger {
     width: 30px;
