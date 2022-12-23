@@ -36,10 +36,10 @@ $(window).on('load', function () {
 
 function header_sync() {
   let scroll = $(window).scrollTop();
-  let profile_pos = $('#profile').offset().top - 90;
-  let career_pos = $('#career').offset().top - 90;
-  let skill_pos = $('#skill').offset().top - 90;
-  let works_pos = $('#works').offset().top - 90;
+  let profile_pos = $('#profile').offset().top - 100;
+  let career_pos = $('#career').offset().top - 100;
+  let skill_pos = $('#skill').offset().top - 100;
+  let works_pos = $('#works').offset().top - 100;
   let contact_pos = $('#contact').offset().top - $(window).height();
   let footer_pos = $('#footer').offset().top - $(window).height();
   let pageBottom = $(document).height() - $(window).height();
@@ -88,7 +88,7 @@ function timelineAnime() {
     let scroll = $(window).scrollTop();
     let elemPos = $(this).offset().top;
     let startPoint = 300;
-    if (scroll >= elemPos - 1 / 2 * $(window).height()) {
+    if (scroll >= elemPos - $(window).height() - startPoint) {
       let H = $(this).height();
       let percent = (scroll + startPoint - elemPos) / (H) * 100;
       if (percent > 100) {
